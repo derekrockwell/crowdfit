@@ -1,0 +1,33 @@
+
+
+<div id="login">
+	<% if !devise_error_messages!.empty? %>
+		<div class="alert alert-error alert-floating">
+			<button type="button" class="close" data-dismiss="alert">×</button>
+			<%= devise_error_messages! %>
+		</div>
+	<% end %>
+	<% flash.each do |key, value| %>
+	<div class="alert alert-block alert-floating">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<%= content_tag :div, value, :class => "flash #{key}" unless value.blank? %>
+	</div>
+	<% end %>
+	<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => "well well-raised" }) do |f| %>
+	<legend>Password Reset</legend>
+	<small class="help-block">Enter your email and a password reset link will be e-mailed to you</small>
+	<div class="control-group">
+		<div><%= f.label :email, :class => "control-label" %>
+			<div class="controls">
+				<%= f.email_field :email %>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="form-actions align-center">
+		<%= f.submit " Send Password Reset Email ", :class => "btn btn-primary btn-large" %>
+	</div>
+</fieldset>
+<% end %>
+</div>

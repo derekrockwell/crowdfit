@@ -1,0 +1,34 @@
+
+<% if user_signed_in? %>
+
+    <script>
+	//UserVoice integration w/ sso if user is logged in
+	var uvOptions = {
+		params: { sso: "<%= @current_sso_token %>" }
+	};
+	</script>	
+
+<% else %>
+
+<script>
+	//don't use SSO if user isnt logged in
+	var uvOptions = {};
+</script>	
+
+<% end %>
+
+	<script type="text/javascript"> 
+
+	(function() {
+		var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+		uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/2u095cyjG1WaSmW7hmeNVQ.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+	})();
+</script>
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+
+<% if user_signed_in? %>
+<%= raw FastPass.script("s1oacgwvpjrw", "54jcsvetwbl0r1ebtah8bapvck1rikxv", current_user.email, current_user.email, current_user.id) %>
+<% end %>
+
+<script type="text/javascript" src="https://loader.engage.gsfn.us/loader.js"></script>
+<script type="text/javascript">
+	if (typeof GSFN !== "undefined") { GSFN.loadWidget(1986,{"containerId":"getsat-widget-1986"}); }
+</script>

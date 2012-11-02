@@ -1,0 +1,27 @@
+
+
+<script>
+  // If for some reason KISSmetrics doesn't load or there is an
+  // error we'll just show the default green button after 1.5s
+  var abTimeout1 = setTimeout(function(){
+    document.getElementById("navbar").style.display = '';
+  }, 1500);
+  
+  // Now we need to add some Javascript code to run our A/B test
+  // Using _kmq.push to call our setup function ensures that it 
+  // is only called once KM is loaded
+  _kmq.push(function(){
+    // Set up the experiment (this is the meat and potatoes)
+    var ab_class = KM.ab("Navbar Color", ["", "navbar-inverse"]);
+
+    // Set the button color
+    $("#navbar").addClass(ab_class).show();  
+    
+
+    // Clear the timeout, since this worked fine
+    clearTimeout(abTimeout1);
+  });
+
+  // Record when someone clicks on the button
+  _kmq.push(["trackClick", "signup_button", "Clicked Signup button in header"])
+</script>
