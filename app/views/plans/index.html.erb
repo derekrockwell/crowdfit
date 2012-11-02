@@ -1,0 +1,24 @@
+<h1>Listing plans</h1>
+<div class="row-fluid">
+	<% @plans.each do |plan| %>
+	<div class="pricing span3">
+		<div class="pricing-wrapper">
+			<div class="pricing-header">
+				<h1><%=plan.name%></h1>
+			</div>
+			<div class="pricing-body">
+				<div class="pricing-price"><%=number_to_currency(plan.price, :unit => "$")%></div>
+				<ul>
+					<li>Dummy Text</li>
+					<li>Lots of Dummy Text</li>
+					<li>Way Cool Feature</li>
+					<li>Omg, features!</li>
+				</ul>
+				<div class="pricing-footer">
+					<%= link_to 'Sign Up!', new_plan_user_path(plan), :class => "btn btn-large btn-success" %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<% end %>
+</div>

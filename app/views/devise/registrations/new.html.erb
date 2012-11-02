@@ -1,0 +1,35 @@
+<div id="login">
+	<%= form_for(resource, :as => resource_name, :url => user_registration_path(resource), :html => {:class => "form-vertical well well-raised clearfix"}) do |f| %>
+	<%= devise_error_messages! %>
+	<fieldset>
+		<legend>Signup for an Account</legend>
+		<small class="help-block">Enter your personal information:</small>
+		<div class="control-group">
+			<div><%= f.label :email, :class => "control-label" %>
+				<div class="controls">
+					<%= f.email_field :email %>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<div><%= f.label :password, :class => "control-label" %>
+				<div class="controls">
+					<%= f.password_field :password %>
+				</div>
+			</div>
+		</div>
+		<div class="control-group">
+			<div><%= f.label :password_confirmation, :class => "control-label" %>
+				<div class="controls">
+					<%= f.password_field :password_confirmation %>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-actions align-center">
+			<%= f.submit "Register Your Account Now", :class => "btn btn-primary btn-large " %>
+			<div><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></div>
+		</div>
+	</fieldset>
+	<% end %>
+</div>
