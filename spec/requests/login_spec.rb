@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "login" do 
 
 	describe "existing user" do

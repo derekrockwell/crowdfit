@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "plans" do 
 
 	plan_a = FactoryGirl.create(:plan)
