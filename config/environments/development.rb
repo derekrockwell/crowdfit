@@ -38,9 +38,6 @@ CrowdfitRails::Application.configure do
   ##config.action_mailer.perform_deliveries = true
   #config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :test
-  #config.action_mailer.smtp_settings = {
-  #  address:              'vmgwoptlabs09.optumlabs.lab',
-  #  enable_starttls_auto: true  }
 
   # Expands the lines which load the assets
   config.assets.debug = true
