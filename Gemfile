@@ -14,6 +14,7 @@ gem 'stripe'
 gem "permanent_records"
 gem 'protected_attributes'
 gem "jquery-rails"
+gem "figaro"
 
 group :production do 
 	gem 'pg'
