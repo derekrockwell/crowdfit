@@ -12,8 +12,9 @@ gem 'uservoice-ruby'
 gem 'newrelic_rpm'
 gem 'stripe'
 gem "permanent_records"
-gem 'therubyracer', :platform => :ruby
 gem 'protected_attributes'
+gem "jquery-rails"
+
 group :production do 
 	gem 'pg'
 end
@@ -30,7 +31,8 @@ group :test, :development do
 	gem "guard-rspec"
 	gem "simplecov"
 	gem "database_cleaner"
-	gem "faker"
+	gem "faker"	
+	gem 'therubyracer', :platform => :ruby
 end
 
 # Gems used only for assets and not required
