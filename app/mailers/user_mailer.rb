@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
   end
 
   def test_mail
-    mail to: "derek_rockwell@uhc.com", subject:"Test"
+    mail to: "derek.a.rockwell@gmail.com", subject:"Test"
   end
   
 
