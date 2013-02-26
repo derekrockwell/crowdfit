@@ -1,9 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '4.0.0.beta1'
 
-gem 'pg'
-gem 'sqlite3'
 
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem "omniauth-facebook"
@@ -19,7 +17,11 @@ gem "permanent_records"
 gem 'therubyracer', :platform => :ruby
 
 group :production do 
-	
+	gem 'pg'
+end
+
+group :development do
+	gem 'sqlite3'
 end
 
 group :test, :development do
@@ -28,7 +30,6 @@ group :test, :development do
 	gem "rspec_junit_formatter"
 	gem "capybara"
 	gem "guard-rspec"
-	gem "spork-rails"
 	gem "simplecov"
 	gem "database_cleaner"
 	gem "faker"
