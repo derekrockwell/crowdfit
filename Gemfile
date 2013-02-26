@@ -11,7 +11,6 @@ gem 'bundler'
 gem 'uservoice-ruby'
 gem 'newrelic_rpm'
 gem 'stripe'
-gem 'activeadmin'
 gem "permanent_records"
 gem 'therubyracer', :platform => :ruby
 
@@ -32,7 +31,6 @@ group :test, :development do
 	gem "simplecov"
 	gem "database_cleaner"
 	gem "faker"
-
 end
 
 # Gems used only for assets and not required
