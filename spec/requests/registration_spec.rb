@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "registration" do
 
 	describe "register user" do

@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe "password reset" do 
 
 	it "sends reset email for valid user on request" do
