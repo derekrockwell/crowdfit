@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0.beta1'
 
-
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem "omniauth-facebook"
 gem "koala"
@@ -39,9 +38,9 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'sass-rails',   '~> 3.2.3'
-	gem 'coffee-rails', '~> 3.2.1'
-	gem 'uglifier', '>= 1.0.3'
+	gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git'
+	gem 'coffee-rails', :git => 'https://github.com/rails/coffee-rails.git'
+	gem 'uglifier', '1.0.3'
 end
 
 
