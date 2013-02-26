@@ -13,7 +13,7 @@ gem 'newrelic_rpm'
 gem 'stripe'
 gem "permanent_records"
 gem 'therubyracer', :platform => :ruby
-
+gem 'protected_attributes'
 group :production do 
 	gem 'pg'
 end
