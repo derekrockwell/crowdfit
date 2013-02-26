@@ -5,7 +5,7 @@ gem 'rails', '4.0.0.beta1'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails'
 gem "omniauth-facebook"
 gem "koala"
-gem 'devise'
+gem 'devise', :git => "https://github.com/plataformatec/devise.git", :branch => "rails4"
 gem 'execjs'
 gem 'bundler'
 gem 'uservoice-ruby'
