@@ -4,12 +4,10 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: crowdfit_rails
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: crowdfit_dev
-  password: crowdfit5254
+  timeout: 5000
 
 #temporarily the same as dev box
 production:
