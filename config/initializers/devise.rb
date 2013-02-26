@@ -16,9 +16,11 @@ Devise.setup do |config|
 
   require 'devise/orm/active_record'
   require "omniauth-facebook"
-  config.omniauth :facebook, "322428021183705", "44fafa49a78707b4f488caaf3a60e054",:site => 'https://graph.facebook.com/',:authorize_path => '/oauth/authorize',:access_token_path => '/oauth/access_token',
+  config.omniauth :facebook, ENV["FACEBOOK_API_KEY"], 
+  ENV["FACEBOOK_PUBLIC_KEY"],:site => 'https://graph.facebook.com/',
+  :authorize_path => '/oauth/authorize',:access_token_path => '/oauth/access_token',
   :client_options => {:ssl => {:ca_file => Rails.root.join('lib/ca-bundle.crt').to_s}},
-    :scope => 'email,user_birthday,read_stream,user_likes'
+  :scope => 'email,user_birthday,read_stream,user_likes'
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for
