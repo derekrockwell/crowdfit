@@ -11,9 +11,7 @@ CrowdfitRails::Application.routes.draw do
   devise_for :users,:controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :registrations => "registrations" }
 
   devise_scope :user do    
-    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'
-    match 'auth/:provider/callback', to: 'users/omniauth_callbacks#facebook'
-    
+    get '/users/auth/:provider' => 'users/omniauth_callbacks#passthru'    
     get '/sign_out' => 'devise/sessions#destroy'
     get '/signin' => 'home#login'
   end
