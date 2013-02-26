@@ -15,6 +15,9 @@ gem "permanent_records"
 gem 'protected_attributes'
 gem "jquery-rails"
 gem "figaro"
+gem "meta_search", :path => "/Users/derekrockwell/projects/forks/meta_search"
+gem "bourbon"
+gem "sass"
 
 group :production do 
 	gem 'pg'
@@ -34,6 +37,8 @@ group :test, :development do
 	gem "database_cleaner"
 	gem "faker"	
 	gem 'therubyracer', :platform => :ruby
+	gem "better_errors"
+	gem "binding_of_caller"
 end
 
 # Gems used only for assets and not required
@@ -44,4 +49,4 @@ group :assets do
 	gem 'uglifier', '1.0.3'
 end
 
-
+gem 'activeadmin', :path => "/Users/derekrockwell/projects/forks/active_admin_rails4"
