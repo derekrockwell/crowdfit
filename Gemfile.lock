@@ -150,6 +150,8 @@ GEM
     pg (0.14.1)
     pg (0.14.1-x86-mingw32)
     polyglot (0.3.3)
+    protected_attributes (1.0.0)
+      activemodel (>= 4.0.0.beta, < 5.0)
     pry (0.9.12)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -273,6 +275,7 @@ DEPENDENCIES
   omniauth-facebook
   permanent_records
   pg
+  protected_attributes
   rails (= 4.0.0.beta1)
   rspec-rails
   rspec_junit_formatter
