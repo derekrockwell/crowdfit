@@ -7,6 +7,9 @@
 # Ignore bundler config
 /.bundle
 
+/config/database.yml
+/config/initializers/secret_token.yml
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
