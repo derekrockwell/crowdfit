@@ -9,13 +9,14 @@ gem 'devise', :git => "https://github.com/plataformatec/devise.git", :branch => 
 gem 'execjs'
 gem 'bundler'
 gem 'uservoice-ruby'
-gem 'newrelic_rpm'
+
 gem 'stripe'
 gem "permanent_records"
 gem 'protected_attributes'
 gem "jquery-rails"
 gem "figaro"
-gem "meta_search", :path => "/Users/derekrockwell/projects/forks/meta_search"
+#gem "meta_search", :path => "/Users/derekrockwell/projects/forks/meta_search"
+gem "ransack", :path => "/Users/derekrockwell/projects/forks/ransack"
 gem "bourbon"
 gem "sass"
 gem "kaminari"
@@ -25,6 +26,7 @@ gem "arbre"
 
 group :production do 
 	gem 'pg'
+	gem 'newrelic_rpm'
 end
 
 group :development do
