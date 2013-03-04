@@ -18,6 +18,10 @@ gem "figaro"
 gem "meta_search", :path => "/Users/derekrockwell/projects/forks/meta_search"
 gem "bourbon"
 gem "sass"
+gem "kaminari"
+gem "formtastic"
+gem "inherited_resources"
+gem "arbre"
 
 group :production do 
 	gem 'pg'
@@ -46,6 +50,7 @@ end
 group :assets do
 	gem 'sass-rails', :git => 'https://github.com/rails/sass-rails.git'
 	gem 'coffee-rails', :git => 'https://github.com/rails/coffee-rails.git'
+	gem 'coffee-script-source', '~> 1.4.0' # ADD THIS LINE, 1.5.0 doesn't compile ActiveAdmin JavaScript files
 	gem 'uglifier', '1.0.3'
 end
 
